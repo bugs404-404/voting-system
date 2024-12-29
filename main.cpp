@@ -33,3 +33,14 @@ void electionResult()
     }
     else if (aap>bsp)
     {
+        cout<<"\n***************************************";
+        cout<<"\n       AAP won the election   \n\n";
+        cout<<"    Total vote of AAP : "<<aap<<endl;
+        wonByVote=aap-congress;
+        cout<<"\n   AAP won by "<<wonByVote<<" votes to Congress\n";
+        wonByVote=aap-bjp;
+        cout<<"   AAP won by "<<wonByVote<<" votes to BJP\n";
+        wonByVote=aap-bsp;
+        cout<<"   AAP won by "<<wonByVote<<" votes to BSP\n";
+        cout<<"**************************************\n";
+    }
