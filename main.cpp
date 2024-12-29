@@ -44,3 +44,26 @@ void electionResult()
         cout<<"   AAP won by "<<wonByVote<<" votes to BSP\n";
         cout<<"**************************************\n";
     }
+    else if(bjp==congress&&bjp==aap&&bjp==bsp)
+    {
+        cout<<"\n***************************************";
+        cout<<"\nEvery party got equal votes\n\n";
+        cout<<"Party\t\tVotes\n";
+        cout<<"BJP\t\t  "<<bjp<<endl;
+        cout<<"Congress      \t  "<<congress<<endl;
+        cout<<"APP\t\t  "<<aap<<endl;
+        cout<<"BSP\t\t  "<<bsp<<endl;
+        cout<<"**************************************\n";
+    }
+    else {
+        cout<<"\n***************************************";
+        cout<<"\n       BSP won the election   \n\n";
+        cout<<"    Total vote of BSP : "<<bsp<<endl;
+        wonByVote=bsp-congress;
+        cout<<"\n   BSP won by "<<wonByVote<<" votes to Congress\n";
+        wonByVote=bsp-aap;
+        cout<<"   BSP won by "<<wonByVote<<" votes to AAP\n";
+        wonByVote=bsp-bjp;
+        cout<<"   BSP won by "<<wonByVote<<" votes to BJP\n";
+        cout<<"***************************************\n";
+    }
