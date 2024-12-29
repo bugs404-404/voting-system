@@ -2,8 +2,7 @@
 using namespace std;
 
 int bjp=0, congress=0, aap=0, bsp=0;
-void electionResult()
-{
+void electionResult() {
     int wonByVote;
     if (bjp>congress&&bjp>aap&&bjp>bsp)
     {
@@ -65,5 +64,24 @@ void electionResult()
         cout<<"   BSP won by "<<wonByVote<<" votes to AAP\n";
         wonByVote=bsp-bjp;
         cout<<"   BSP won by "<<wonByVote<<" votes to BJP\n";
-        cout<<"***************************************\n";
+        cout<<"***************************************\n"
     }
+}
+void calculateVote(int vote)
+{
+    switch (vote)
+    {
+        case 1:
+            bjp+=1;
+        break;
+        case 2:
+            congress+=1;
+        break;
+        case 3:
+            aap+=1;
+        break;
+        case 4:
+            bsp+=1;
+        break;
+    }
+}
