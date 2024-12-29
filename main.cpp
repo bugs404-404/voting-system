@@ -18,3 +18,18 @@ void electionResult()
         cout<<"   BJP won by "<<wonByVote<<" votes to BSP"<<endl;
         cout<<"**************************************\n";
     }
+    else if (congress>aap&&congress>bsp)
+    {
+        cout<<"\n***************************************";
+        cout<<"\n      Congress won the election   \n\n";
+        cout<<"\n    Total vote of Congress : "<<congress<<endl;
+        wonByVote=congress-bjp;
+        cout<<"   Congress won by "<<wonByVote<<" votes to BJP\n";
+        wonByVote=congress-aap;
+        cout<<"   Congress won by "<<wonByVote<<" votes to AAP\n";
+        wonByVote=congress-bsp;
+        cout<<"   Congress won by "<<wonByVote<<" votes to BSP\n";
+        cout<<"**************************************\n";
+    }
+    else if (aap>bsp)
+    {
