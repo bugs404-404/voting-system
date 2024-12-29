@@ -64,7 +64,7 @@ void electionResult() {
         cout<<"   BSP won by "<<wonByVote<<" votes to AAP\n";
         wonByVote=bsp-bjp;
         cout<<"   BSP won by "<<wonByVote<<" votes to BJP\n";
-        cout<<"***************************************\n"
+        cout<<"***************************************\n";
     }
 }
 void calculateVote(int vote)
@@ -84,4 +84,40 @@ void calculateVote(int vote)
             bsp+=1;
         break;
     }
+}
+int main()
+{
+    int choose;
+
+
+    cout<<"\n         WELCOME TO SIMPLE VOTING SYSTEM PROJECT         \n\n";
+    cout<<"              PRESIDENT AND VICE PRESIDENT ELECTION          \n\n";
+    cout<<"*************************************************************\n";
+    cout<<"|           1.BJP             |          2.Congress         |\n";
+    cout<<"*************************************************************\n";
+    cout<<"|           3.APP             |          4.BSP              |\n";
+    cout<<"*************************************************************\n\n";
+    cout<<"Press 1 to vote BJP\tPress 2 to vote Congress\n";
+    cout<<"Press 3 to vote APP\tPress 4 to vote BSP\n";
+    cout<<"Press 5 to show election result\n\n";
+    do
+    {
+        again:
+        cout<<"Vote for change: ";
+        cin.sync();
+        cin>>choose;
+        if (choose==5)
+        {
+            electionResult();
+        }else if(choose>=1&&choose<5)
+        {
+            calculateVote(choose);
+        }else
+        {
+            cout<<"\nInvalid key pressed try again"<<endl;
+            goto again;
+        }
+    } while (choose != 5);
+    cout<<endl;
+    return 0;
 }
